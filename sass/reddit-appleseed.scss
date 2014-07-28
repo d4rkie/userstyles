@@ -398,11 +398,13 @@ h2 {
     width: 20px !important
 }
 
-#header-img {
+#header-img, #header-img.default-header {
     position: absolute;
     left: 31px;
     top: 31px;
     content: " ";
+    background: none;
+    color: transparent;
     &:before {
         height: 30px;
         width: 30px;
