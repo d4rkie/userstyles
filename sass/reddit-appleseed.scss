@@ -402,42 +402,15 @@ h2 {
     position: absolute;
     left: 31px;
     top: 31px;
-    // width: 0px !important;
+    content: "";
     &:before {
         height: 30px;
         width: 30px;
         display: block;
+        zoom: 0.04076086957;
         content: url("http://b.thumbs.redditmedia.com/o7UQKBLP6Ym2qYx1.png");
-        // background:  center no-repeat !important;
     }
 }
-
-// #header-img.default-header, #header-img {
-//     
-    
-    
-// }
-
-// @media (-webkit-min-device-pixel-ratio:2), (min-resolution:192dpi){#header-img.default-header, #header-img {
-        
-//         background-size: contain !important
-//     }
-// }
-
-// #header-img:before {
-//     position: absolute;
-//     left: 31px;
-//     top: 31px;
-//     height: 30px;
-//     width: 30px;
-//     background: url("http://a.thumbs.redditmedia.com/t4Inifiedn8R6fCL.png") center no-repeat !important
-// }
-
-// @media (-webkit-min-device-pixel-ratio:2), (min-resolution:192dpi){#header-img.default-header, #header-img {
-//         background: url("http://b.thumbs.redditmedia.com/o7UQKBLP6Ym2qYx1.png") center no-repeat !important;
-//         background-size: contain !important
-//     }
-// }
 
 #header-bottom-left {
     margin: 0 auto;

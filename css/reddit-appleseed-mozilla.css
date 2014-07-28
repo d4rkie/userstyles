@@ -402,11 +402,13 @@
     position: absolute;
     left: 31px;
     top: 31px;
+    content: "";
   }
   #header-img:before {
     height: 30px;
     width: 30px;
     display: block;
+    zoom: 0.04076086957;
     content: url("http://b.thumbs.redditmedia.com/o7UQKBLP6Ym2qYx1.png");
   }
 
