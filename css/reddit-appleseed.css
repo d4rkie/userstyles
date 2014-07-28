@@ -401,14 +401,15 @@ h2 {
   position: absolute;
   left: 31px;
   top: 31px;
-  content: "";
+  content: " ";
 }
 #header-img:before {
   height: 30px;
   width: 30px;
   display: block;
-  zoom: 0.04076086957;
-  content: url("http://b.thumbs.redditmedia.com/o7UQKBLP6Ym2qYx1.png");
+  content: " ";
+  background-image: url("http://b.thumbs.redditmedia.com/o7UQKBLP6Ym2qYx1.png") !important;
+  background-size: contain !important;
 }
 
 #header-bottom-left {
@@ -432,13 +433,17 @@ h2 {
   background: url("http://a.thumbs.redditmedia.com/AuGwZujYoMPwKVXD.png") center no-repeat;
   background-repeat: no-repeat;
 }
-
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .pagename a {
     background-image: url("http://b.thumbs.redditmedia.com/bqQo_KviwcnPYMbo.png");
     background-size: contain !important;
   }
 }
+.pagename a[href="http://www.reddit.com/r/japan/"] {
+  background-image: url('/images/r-japan.png?1406534929');
+  background-size: contain !important;
+}
+
 .thing.stickied a.title {
   color: #41c663 !important;
 }

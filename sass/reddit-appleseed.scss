@@ -402,13 +402,14 @@ h2 {
     position: absolute;
     left: 31px;
     top: 31px;
-    content: "";
+    content: " ";
     &:before {
         height: 30px;
         width: 30px;
         display: block;
-        zoom: 0.04076086957;
-        content: url("http://b.thumbs.redditmedia.com/o7UQKBLP6Ym2qYx1.png");
+        content: " ";
+        background-image: url("http://b.thumbs.redditmedia.com/o7UQKBLP6Ym2qYx1.png") !important;
+        background-size: contain !important
     }
 }
 
@@ -424,19 +425,26 @@ h2 {
     right: 16px
 }
 
-.pagename a {
-    width: 59px;
-    height: 73px;
-    display: block;
-    margin: -10px auto 20px;
-    text-indent: -99999px;
-    background: url("http://a.thumbs.redditmedia.com/AuGwZujYoMPwKVXD.png") center no-repeat;
-    background-repeat: no-repeat
-}
+.pagename {
+    a {
+        width: 59px;
+        height: 73px;
+        display: block;
+        margin: -10px auto 20px;
+        text-indent: -99999px;
+        background: url("http://a.thumbs.redditmedia.com/AuGwZujYoMPwKVXD.png") center no-repeat;
+        background-repeat: no-repeat;
 
-@media (-webkit-min-device-pixel-ratio:2), (min-resolution:192dpi){.pagename a {
-        background-image: url("http://b.thumbs.redditmedia.com/bqQo_KviwcnPYMbo.png");
-        background-size: contain !important
+        @media (-webkit-min-device-pixel-ratio:2), (min-resolution:192dpi){ 
+            & {
+                background-image: url("http://b.thumbs.redditmedia.com/bqQo_KviwcnPYMbo.png");
+                background-size: contain !important
+            }
+        }
+        &[href="http://www.reddit.com/r/japan/"] {
+            background-image: image-url("r-japan.png");
+            background-size: contain !important
+        }
     }
 }
 
