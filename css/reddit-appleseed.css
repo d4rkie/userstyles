@@ -427,23 +427,30 @@ h2 {
 }
 
 .pagename a {
-  width: 59px;
-  height: 73px;
+  min-height: 73px;
   display: block;
   margin: -10px auto 20px;
-  text-indent: -99999px;
-  background: url("http://a.thumbs.redditmedia.com/AuGwZujYoMPwKVXD.png") center no-repeat;
-  background-repeat: no-repeat;
+  font-variant: normal;
+  text-align: center;
+  font-size: 59px;
+  font-weight: 100;
 }
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  .pagename a {
-    background-image: url("http://b.thumbs.redditmedia.com/bqQo_KviwcnPYMbo.png");
-    background-size: contain !important;
-  }
+.pagename a:before {
+  content: "r/";
 }
 .pagename a[href="http://www.reddit.com/r/japan/"] {
   background-image: url('/images/r-japan.png?1406534929');
   background-size: contain !important;
+  text-indent: -99999px;
+  width: 73px;
+  height: 73px;
+}
+.pagename a[href="http://www.reddit.com/r/apple/"] {
+  background-image: url("http://b.thumbs.redditmedia.com/bqQo_KviwcnPYMbo.png");
+  background-size: contain !important;
+  text-indent: -99999px;
+  width: 59px;
+  height: 73px;
 }
 
 .thing.stickied a.title {
