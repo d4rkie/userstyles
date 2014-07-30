@@ -306,7 +306,7 @@ body {
 }
 
 #header {
-    height: 165px;
+    // height: 165px;
     border: none;
     background: none;
     padding: 0 0 10px
@@ -428,6 +428,13 @@ h2 {
 }
 
 .pagename {
+    min-height: 73px;
+    display: block;
+    margin: -10px auto 20px;
+    font-variant: normal;
+    text-align: center;
+    font-size: 59px;
+    font-weight: 100;
     a {
         min-height: 73px;
         display: block;
@@ -444,8 +451,24 @@ h2 {
             background-image: image-url("r-japan.png");
             background-size: contain !important;
             text-indent: -99999px;
-            width: 73px;
-            height: 73px;
+            width: 100px;
+            height: 100px;
+        }
+
+        &[href="http://www.reddit.com/r/DotA2/"] {
+            background-image: image-url("r-dota2.png");
+            background-size: contain !important;
+            text-indent: -99999px;
+            width: 100px;
+            height: 100px;
+        }
+
+        &[href="http://www.reddit.com/r/ffxiv/"] {
+            background-image: image-url("r-ffxiv.png");
+            background-size: contain !important;
+            text-indent: -99999px;
+            width: 227px;
+            height: 150px;
         }
 
         &[href="http://www.reddit.com/r/apple/"] {
@@ -475,48 +498,65 @@ a {
 }
 
 .tabmenu {
-    margin-top: 0
+    margin-top: 0;
+
+    li {
+        margin: 0 !important;
+        font-weight: normal;
+        width: 102px;
+        height: 36px;
+
+        a {
+            padding: 8px 20px !important;
+            background-color: #fcfcfc;
+            border: 1px #ebebeb solid;
+            border-bottom: 1px #DBDBDB solid;
+            border-left: none;
+            color: #535353;
+            font-weight: 300;
+            min-width: 80px !important;
+            display: inline-block;
+            text-align: center;
+        }
+
+        &:hover { 
+            a {
+                background: #f9f9f9
+            }
+        }
+
+        &:first-child a {
+            border-left: 1px #ebebeb solid;
+            -webkit-border-radius: 5px 0 0 5px;
+            border-radius: 5px 0 0 5px;
+        }
+
+        &:last-child a {
+            -webkit-border-radius: 0 5px 5px 0;
+            border-radius: 0 5px 5px 0;
+        }
+
+        &.selected a {
+            color: #fff;
+            background: #6e6d6e;
+            border: none !important;
+        }
+    }
 }
 
-.tabmenu li {
-    margin: 0 !important;
-    font-weight: normal;
-    width: 102px;
-    height: 36px
-}
-
-.tabmenu li a {
-    padding: 8px 20px !important;
-    background-color: #fcfcfc;
-    border: 1px #ebebeb solid;
-    border-bottom: 1px #DBDBDB solid;
-    border-left: none;
-    color: #535353;
-    font-weight: 300;
-    min-width: 80px !important;
-    display: inline-block;
-    text-align: center
-}
-
-.tabmenu li:hover a {
-    background: #f9f9f9
-}
-
-.tabmenu li:first-child a {
-    border-left: 1px #ebebeb solid;
-    -webkit-border-radius: 5px 0 0 5px;
-    border-radius: 5px 0 0 5px
-}
-
-.tabmenu li:last-child a {
-    -webkit-border-radius: 0 5px 5px 0;
-    border-radius: 0 5px 5px 0
-}
-
-.tabmenu li.selected a {
-    color: #fff;
-    background: #6e6d6e;
-    border: none !important
+.front-page {
+    .tabmenu {
+        &:before {
+            min-height: 73px;
+            display: block;
+            margin: 10px auto 20px;
+            font-variant: normal;
+            text-align: center;
+            font-size: 59px;
+            font-weight: 100;
+            content: "front page";
+        }
+    }
 }
 
 div.content {
@@ -526,6 +566,12 @@ div.content {
     font-size: 12px;
     -webkit-border-radius: 5px;
     border-radius: 5px
+}
+
+.messages-page {
+    div.content {
+        margin: 0 15px 10px 15px;
+    }
 }
 
 .content h1 {

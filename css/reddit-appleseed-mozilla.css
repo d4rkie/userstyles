@@ -306,7 +306,6 @@
     }
 }
   #header {
-    height: 165px;
     border: none;
     background: none;
     padding: 0 0 10px;
@@ -427,6 +426,15 @@
     right: 16px;
   }
 
+  .pagename {
+    min-height: 73px;
+    display: block;
+    margin: -10px auto 20px;
+    font-variant: normal;
+    text-align: center;
+    font-size: 59px;
+    font-weight: 100;
+  }
   .pagename a {
     min-height: 73px;
     display: block;
@@ -443,8 +451,22 @@
     background-image: url('/images/r-japan.png?1406534929');
     background-size: contain !important;
     text-indent: -99999px;
-    width: 73px;
-    height: 73px;
+    width: 100px;
+    height: 100px;
+  }
+  .pagename a[href="http://www.reddit.com/r/DotA2/"] {
+    background-image: url('/images/r-dota2.png?1406693622');
+    background-size: contain !important;
+    text-indent: -99999px;
+    width: 100px;
+    height: 100px;
+  }
+  .pagename a[href="http://www.reddit.com/r/ffxiv/"] {
+    background-image: url('/images/r-ffxiv.png?1406694465');
+    background-size: contain !important;
+    text-indent: -99999px;
+    width: 227px;
+    height: 150px;
   }
   .pagename a[href="http://www.reddit.com/r/apple/"] {
     background-image: url("http://b.thumbs.redditmedia.com/bqQo_KviwcnPYMbo.png");
@@ -473,14 +495,12 @@
   .tabmenu {
     margin-top: 0;
   }
-
   .tabmenu li {
     margin: 0 !important;
     font-weight: normal;
     width: 102px;
     height: 36px;
   }
-
   .tabmenu li a {
     padding: 8px 20px !important;
     background-color: #fcfcfc;
@@ -493,26 +513,33 @@
     display: inline-block;
     text-align: center;
   }
-
   .tabmenu li:hover a {
     background: #f9f9f9;
   }
-
   .tabmenu li:first-child a {
     border-left: 1px #ebebeb solid;
     -webkit-border-radius: 5px 0 0 5px;
     border-radius: 5px 0 0 5px;
   }
-
   .tabmenu li:last-child a {
     -webkit-border-radius: 0 5px 5px 0;
     border-radius: 0 5px 5px 0;
   }
-
   .tabmenu li.selected a {
     color: #fff;
     background: #6e6d6e;
     border: none !important;
+  }
+
+  .front-page .tabmenu:before {
+    min-height: 73px;
+    display: block;
+    margin: 10px auto 20px;
+    font-variant: normal;
+    text-align: center;
+    font-size: 59px;
+    font-weight: 100;
+    content: "front page";
   }
 
   div.content {
@@ -522,6 +549,10 @@
     font-size: 12px;
     -webkit-border-radius: 5px;
     border-radius: 5px;
+  }
+
+  .messages-page div.content {
+    margin: 0 15px 10px 15px;
   }
 
   .content h1 {
